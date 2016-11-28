@@ -17,17 +17,6 @@
         android:id="@+id/textView" />
 
     <Button
-        android:text="@string/write"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="58dp"
-        android:id="@+id/button_write"
-        android:onClick="WriteOBJ"/>
-
-    <Button
         android:text="@string/read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,5 +51,46 @@
         android:layout_below="@+id/button_clear"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/listview1" />
+        android:id="@+id/listview2" />
+
+    <Button
+        android:text="@string/initialize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/initilize"
+        android:onClick="InitializeOBJ"
+        android:layout_alignBaseline="@+id/button_read"
+        android:layout_alignBottom="@+id/button_read"
+        android:layout_alignEnd="@+id/button_add" />
+
+    <Button
+        android:text="@string/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:id="@+id/button_add"
+        android:onClick="ADDOBJ"
+        android:layout_above="@+id/listview2"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:id="@+id/button_write"
+        android:onClick="WriteOBJ"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="@string/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/test"
+        tools:ignore="RelativeOverlap"
+        android:onClick="Next"/>
+
 </RelativeLayout>
