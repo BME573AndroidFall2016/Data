@@ -56,7 +56,7 @@ public class Main2Activity extends AppCompatActivity {
             write.add(tt2[i]);     // Add the array of data objects to the arraylist object
         }
         try {
-            FileOutputStream fout = openFileOutput("data.txt", MODE_APPEND);
+            FileOutputStream fout = openFileOutput("data.txt", MODE_PRIVATE);           // I/O operations to write tt2 to file
             ObjectOutputStream oos = new ObjectOutputStream(fout);
             oos.writeObject(write);
             oos.close();
@@ -69,7 +69,7 @@ public class Main2Activity extends AppCompatActivity {
     public void testread(View v) {
         ArrayList<test2> read;
         try {
-            FileInputStream fin = openFileInput("data.txt");
+            FileInputStream fin = openFileInput("data.txt");            // File I/O to read the arraylist object from the file
             ObjectInputStream ois = new ObjectInputStream(fin);
             read = (ArrayList<test2>) (ois.readObject());
             ois.close();
